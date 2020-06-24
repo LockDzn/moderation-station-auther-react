@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import config from '../../config';
 
 const Started = () => {
@@ -15,8 +16,6 @@ const Started = () => {
         setDiscord(false);
         setContact(true);
     }
-
-    console.log(config.BOT_TOKEN)
 
     return(
         <div id="fl">
@@ -59,10 +58,10 @@ const Started = () => {
 
             <p>Se o sistema puder verificar você por conta própria, você ingressará automaticamente no servidor. Por esse motivo, precisamos da permissão para participar em seu nome.</p>
             <div>
-                <a className={discord ? `account-link` : `account-link hidden`} id="discord" href="https://discord.com/api/oauth2/authorize?client_id=579707978970824710&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fdiscord&response_type=code&scope=identify%20guilds%20guilds.join">
+                <a className={discord ? `account-link` : `account-link hidden`} id="discord" href={config.DISCORD_OAUTH2_URL}>
                     Iniciar
                 </a>
-                <a className={contact ? `account-link` : `account-link hidden`} id="contact" href="https://3v.fi/ms-gatekeeper/get-started">
+                <a className={contact ? `account-link` : `account-link hidden`} id="contact" href="email:email@gmail.com">
                     Contate-Nos
                 </a>
             </div>

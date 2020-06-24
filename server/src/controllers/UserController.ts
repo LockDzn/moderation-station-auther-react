@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
 import Discord from 'discord.js';
-import knex from '../database';
 import config from '../config';
 
 import discordClient from '../services/DiscordBOT';
@@ -52,47 +51,7 @@ class UserController {
             mute: false,
         });
 
-
-        var userExists = await knex('discordMods').where('discordID', discordID).select('*').first();
-
-        if(userExists){
-            await knex('discordMods')
-                .where('discordID', discordID)
-                .select('*')
-                .first()
-                .update({
-                    twitchID, 
-                    twitchUsername,
-                    mod, 
-                    staff, 
-                    partner
-                })
-        }else {
-            await knex('discordMods')
-                .insert({
-                    discordID, 
-                    twitchID, 
-                    twitchUsername,
-                    mod, 
-                    staff, 
-                    partner
-                })
-        }
-
         return res.status(201).json({ status: 201, message: 'created user' })
-    }
-
-    async delete(req: Request, res: Response){
-
-        const { discordID } = req.body;
-
-        await knex('discordMods')
-            .where('discordID', discordID)
-            .select('*')
-            .first()
-            .delete()
-        
-        return res.status(200).json({ status: 200, message: 'deleted user' })
     }
 }
 

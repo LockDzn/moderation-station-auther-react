@@ -5,10 +5,11 @@
 /.pnp
 .pnp.js
 
+/src/config.ts
+Procfile
+
 # testing
 /coverage
-
-.src/config.ts
 
 # production
 /build

@@ -5,7 +5,8 @@
 /.pnp
 .pnp.js
 
-.src/config.ts
+/src/config.ts
+Procfile
 
 # testing
 /coverage
