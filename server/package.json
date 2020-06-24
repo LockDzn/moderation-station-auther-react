@@ -2,7 +2,6 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "node build/server.js",
     "build": "rimraf build && tsc",
@@ -18,12 +17,12 @@
     "discord.js": "^12.2.0",
     "express": "^4.17.1",
     "knex": "^0.21.1",
-    "pg": "^8.2.1",
-    "typescript": "^3.9.5"
+    "pg": "^8.2.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.6",
     "rimraf": "^3.0.2",
-    "ts-node-dev": "^1.0.0-pre.49"
+    "ts-node-dev": "^1.0.0-pre.49",
+    "typescript": "^3.9.5"
   }
 }
