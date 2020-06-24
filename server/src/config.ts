@@ -3,7 +3,7 @@ const config = {
     BOT_TOKEN: '',
     DISCORD_CLIENT_ID: '',
     DISCORD_GUILD_ID: '',
-    TWITCH_CLIENT_ID: '',
+    TWITCH_CLIENT_ID: 'mudei aqui',
     TWITCH_ACCESS_TOKEN: ``,
 }
 
